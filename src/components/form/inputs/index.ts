@@ -1,0 +1,1 @@
+export { InputLeading as Input } from './input';
