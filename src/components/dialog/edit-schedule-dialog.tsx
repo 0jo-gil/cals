@@ -11,16 +11,16 @@ export const EditScheduleDialog = () => {
             <DialogTrigger>Edit</DialogTrigger>
 
             <DialogContent>
-                <DialogTitle>Edit Schedule</DialogTitle>
+                <DialogTitle>스케쥴 타입 관리</DialogTitle>
 
                 <DialogDescription>
                     <div className={cn(cn(`grid w-full gap-5`))}>
                         <Input name="title" label='제목' placeholder="회의" />
-                        
+
                         <Editor
                             height="200px"
                             excludedToolbarItems={["blockType"]}
-                            placeholder="텍스트"
+                            placeholder="내용을 입력해주세요."
                         />
                     </div>
                 </DialogDescription>

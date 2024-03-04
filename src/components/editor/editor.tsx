@@ -26,7 +26,7 @@ export type TextEditorProps = {
 
 
 const editorConfig = {
-//   theme: ExampleTheme,
+  //   theme: ExampleTheme,
   onError(error: Error) {
     throw error;
   },
@@ -48,33 +48,33 @@ const editorConfig = {
 
 
 export const Editor = (props: TextEditorProps) => {
-    return (
-        <div className="rounded-md">
-            <LexicalComposer initialConfig={{ ...editorConfig }}>
-                <div className="editor-container hover:border-emphasis focus-within:ring-brand-default rounded-md p-0 focus-within:ring-2">
-        
-                    <div
-                        className={"editor-inner scroll-bar"}
-                                    style={{ height: props.height }}
-                    >
-                        <RichTextPlugin
-                            contentEditable={
-                                <ContentEditable
-                                  readOnly={false}
-                                style={{ height: props.height }}
-                                className="editor-input"
-                                />
-                            }
-                            placeholder={
-                                props?.placeholder ? (
-                                <div className="text-muted -mt-11 p-3 text-sm">{props.placeholder}</div>
-                                ) : null
-                            }
-                            ErrorBoundary={LexicalErrorBoundary}
-                        />
-                    </div>
-                </div>
-            </LexicalComposer>
+  return (
+    <div className="rounded-md border-input border">
+      <LexicalComposer initialConfig={{ ...editorConfig }}>
+        <div className="editor-container hover:border-emphasis focus-within:ring-brand-default rounded-md p-0 focus-within:ring-2">
+
+          <div
+            className={"editor-inner scroll-bar relative"}
+            style={{ height: props.height }}
+          >
+            <RichTextPlugin
+              contentEditable={
+                <ContentEditable
+                  readOnly={false}
+                  style={{ height: props.height }}
+                  className="editor-input py-2 px-3 overflow-auto"
+                />
+              }
+              placeholder={
+                props?.placeholder ? (
+                  <div className="py-2 px-3 text-sm absolute top-0 pointer-events-none">{props.placeholder}</div>
+                ) : null
+              }
+              ErrorBoundary={LexicalErrorBoundary}
+            />
+          </div>
         </div>
-    )
+      </LexicalComposer>
+    </div>
+  )
 }

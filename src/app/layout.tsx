@@ -15,8 +15,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <html lang="ko">
+      <body className={inter.className}>
+        <div className="flex flex-col gap-x-6 md:p-0 xl:flex-row">
+          <div>navigation</div>
+          {children}
+        </div>
+      </body>
     </html>
   );
 }
