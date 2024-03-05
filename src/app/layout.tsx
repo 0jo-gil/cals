@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import { Navigation } from "@/components/navigation/navigation";
+import { Sidebar } from "lucide-react";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,7 +20,7 @@ export default function RootLayout({
     <html lang="ko">
       <body className={inter.className}>
         <div className="flex flex-col gap-x-6 md:p-0 xl:flex-row">
-          <div>navigation</div>
+          <Navigation />
           {children}
         </div>
       </body>
