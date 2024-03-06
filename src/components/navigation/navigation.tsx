@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { PropsWithChildren } from "react";
+import {PropsWithChildren} from "react";
 
 export type NavigationItemType = {
     name: string;
@@ -14,6 +14,10 @@ const NAVIGATION_LIST: NavigationItemType[] = [
         href: '/schedules-type',
     },
     {
+        name: '예약',
+        href: '/reservations',
+    },
+    {
         name: '팀',
         href: '/teams',
     }
@@ -22,15 +26,15 @@ const NAVIGATION_LIST: NavigationItemType[] = [
 const NavigationItem: React.FC<{
     item: NavigationItemType;
 }> = ({
-    item
-}) => {
+          item
+      }) => {
     return (
         <>
             <Link
                 href={item.href}
                 className="todesktop:py-[7px] text-default group flex items-center rounded-md px-2 py-1.5 text-sm font-medium transition"
             >
-                {item.icon && <item.icon />}
+                {item.icon && <item.icon/>}
                 <span>{item.name}</span>
             </Link>
         </>
@@ -53,7 +57,7 @@ export const Navigation = () => {
 const Sidebar = ({children}: PropsWithChildren) => {
 
     return (
-        <div className="relative" >
+        <div className="relative h-dvh">
             <aside
                 className="todesktop:!bg-transparent bg-muted border-muted fixed left-0 hidden h-full max-h-screen w-14 flex-col overflow-y-auto overflow-x-hidden border-r md:sticky md:flex lg:w-56 lg:px-3"
             >
