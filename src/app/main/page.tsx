@@ -1,12 +1,12 @@
 import { EditScheduleDialog } from "@/components/dialog/edit-schedule-dialog";
 
- const MainPage = () => {
-     return (
+const MainPage = () => {
+    return (
         <>
-             <div>MAIN</div>
+            <div>MAIN</div>
             <EditScheduleDialog />
         </>
     )
- }
+}
 
- export default MainPage;
+export default MainPage;

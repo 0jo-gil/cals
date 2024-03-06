@@ -20,7 +20,9 @@ export default function RootLayout({
       <body className={inter.className}>
         <div className="flex flex-row w-full gap-x-6 md:p-0 xl:flex-row">
           <Navigation />
-          {children}
+          <main className="w-full p-3">
+            {children}
+          </main>
         </div>
       </body>
     </html>
