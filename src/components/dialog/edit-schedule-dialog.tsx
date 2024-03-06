@@ -3,11 +3,21 @@
 import { cn } from "@/lib/utils"
 import { Editor } from "../editor"
 import { Input } from "../form/inputs"
-import { Dialog, DialogTitle, DialogTrigger, DialogContent, DialogDescription } from "../ui/dialog"
+import {
+    Dialog,
+    DialogTitle,
+    DialogTrigger,
+    DialogContent,
+    DialogDescription,
+    DialogFooter,
+    DialogClose
+} from "../ui/dialog"
+import {Button} from "@/components/ui/button";
 
 export const EditScheduleDialog = () => {
     return (
         <Dialog>
+            <form>
             <DialogTrigger>Edit</DialogTrigger>
 
             <DialogContent>
@@ -24,7 +34,15 @@ export const EditScheduleDialog = () => {
                         />
                     </div>
                 </DialogDescription>
+
+                <DialogFooter>
+                    <DialogClose asChild>
+                        <Button variant={'secondary'}>Cancel</Button>
+                    </DialogClose>
+                    <Button variant={'default'} type="submit">Submit</Button>
+                </DialogFooter>
             </DialogContent>
+            </form>
         </Dialog>
     )
 }

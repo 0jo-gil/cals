@@ -1,11 +1,11 @@
-import { EditScheduleDialog } from "@/components/dialog/edit-schedule-dialog";
+import {SchedulesTypeListing} from "@/containers/schedules-type";
+import PageLayout from "@/components/layout";
 
 const SchedulesTypePage = () => {
     return (
-        <div>
-            <div>EVENT TYPE</div>
-            <EditScheduleDialog />
-        </div>
+        <PageLayout>
+            <SchedulesTypeListing/>
+        </PageLayout>
     )
 }
 
