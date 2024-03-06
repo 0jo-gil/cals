@@ -1,11 +1,10 @@
 'use client';
 
-import {usePathname} from "next/navigation";
+import { useParams, usePathname, useSearchParams } from "next/navigation";
 
 export const useMatchersUrl = (url: string) => {
     const pathname = usePathname() as null | string;
-    const searchParams = new URLSearchParams(window.location.search);
-    const query = searchParams.toString();
+    const query = useSearchParams().toString();
 
     let pathnameWithQuery;
 
