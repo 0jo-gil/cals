@@ -1,3 +1,5 @@
+'use client';
+
 import {NavigationTabs} from "@/components/navigation/tabs/navigation-tabs";
 
 const TAB = [
